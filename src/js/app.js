@@ -1,6 +1,9 @@
-// TODO: write your code here
-import sum from './basic';
+export default class Validator {
+  constructor(name) {
+    this.name = name;
+  }
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+  validateUsername() {
+    return (/^[a-z]+[[a-z|\-_]*[[\w|-]{0,3}]*[[a-z|\-_]*[a-z]$/i.test(this.name));
+  }
+}
